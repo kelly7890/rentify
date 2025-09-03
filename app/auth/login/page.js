@@ -1,6 +1,7 @@
 import { auth, signIn } from "@/auth";
 import { TextField } from "@mui/material"
 import { FcGoogle } from "react-icons/fc";
+import { RiTwitterXFill } from "react-icons/ri";
 
 export default async function Login () {
     const session = await auth();
@@ -36,11 +37,14 @@ export default async function Login () {
                         <FcGoogle className="text-2xl" />
                         <span className="text-black font-semibold">Sign in with Google</span>
                     </button>
+                    <button className="w-full h-[45px] flex justify-center items-center gap-3 rounded-md hover:shadow-md cursor-pointer">
+                        <RiTwitterXFill className="text-2xl" />
+                        <span className="text-black font-semibold">Sign in with X</span>
+                    </button>
                 </form>
 
             </div>
         </div>
-        
         </main>
     )
 }
